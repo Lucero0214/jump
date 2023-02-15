@@ -1,0 +1,151 @@
+html{
+    scroll-behavior: smooth;
+  }
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    background-color: #85586F;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header"
+      "nav" 
+      "hero"
+      "main" 
+      "footer";
+      animation: myAnimation 6s ease 1s 1 forwards;
+}
+@keyframes myAnimation {
+    33% {
+      background-color:#C3ACD0;
+    }
+    66% {
+      background-color: #FFCEFE;
+    }
+  }
+header,
+nav,
+  main,
+  aside,
+  footer {
+    padding: 1rem;
+  }
+*{
+    box-sizing: border-box;
+}
+header{ 
+    background-color: #F8EAD8;
+    color: #85586F;
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+/* styles the main of navigation bar */
+.main-nav{
+    background-color: #F8EAD8;
+}
+main{
+    background-color: #ae9fa7;
+}
+article {
+    display: block;
+}
+
+.main-nav a {
+    display: block;
+    color:#85586F;
+    text-align: center;
+    text-decoration: none;
+}
+.main-nav a:hover {
+background-color: #ae9fa7;
+color: #fff;
+}
+ul {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+ol {
+    list-style-position: inside;
+    }
+li {
+    font-size: 1.5em;
+     font-family: Verdana, Arial, sans-serif;
+     border-bottom: 1px solid #AAA;
+    line-height:2;
+    }
+
+.main-nav li {
+    padding: 1rem;
+}
+.hero {
+padding: 75px;
+width: 300px;
+height: 300px;
+margin-left: auto;
+margin-right: auto;
+transition-property: width, height;
+transition-duration: 2s;
+}
+.hero:hover{
+width: 500px;
+height: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #F8EAD8;
+    font-size: 3em;
+    padding: 20px;
+    }
+    
+    h2 {
+        text-align: center;
+        color: #F8EAD8;
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.25em;
+    }
+
+
+    footer {
+        background-color: #F8EAD8;
+        text-align: center;
+            font-size: 0.85em;
+            clear: left;
+            color: #000;
+    }
+    @media screen and (min-width: 600px) {
+  
+        body {
+          font-size: 1rem;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-areas: 
+            "header header nav nav" 
+              " . hero hero . "
+              "main main main main" 
+            "footer footer footer footer";
+          padding: 0;
+        }
+        header {
+          grid-area: header;
+        }
+        nav {
+          grid-area: nav;
+        }
+        .hero{
+          grid-area: hero;
+          object-fit: cover;
+        }
+        main {
+          grid-area: main;
+        }
+        footer {
+          grid-area: footer;
+        }
+      }
